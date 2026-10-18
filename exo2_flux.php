@@ -2,19 +2,7 @@
     require "config.php";
 
     ### Exercice 2.1 : `if / elseif / else`
-    function mention($note){
-        if ($note >= 16) {
-        return "Tres bien";
-        } elseif ($note >= 14) {
-            return "Bien";
-        } elseif ($note >= 12) {
-            return "Assez bien";
-        } elseif ($note >= SEUIL) {
-            return "Passable";
-        } else {
-            return "Ajourne";
-        }
-    };
+    
     $note = array(15,10,19,4);
     foreach($note as $a){
         echo 'note '.$a.' : '.mention($a).'<br>';
@@ -104,7 +92,7 @@
                 echo 'At 10; quitting<br>';
                 break 2;
             default:
-                echo $i.'br>';
+                echo $i.'<br>';
         }
         $i++;
     }
@@ -112,7 +100,7 @@
     $i = 0;
     do {
         if ($i == 10) {
-            echo '<strong>'.$x.'</strong><br>';
+            echo '<strong>'.$i.'</strong><br>';
         } else {
             echo $i.'<br>' ;
         }
