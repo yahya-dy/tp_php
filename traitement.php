@@ -26,6 +26,10 @@
     }
 
     if (empty($erreurs)) {
+        $f = fopen('data/notes.csv', 'a'); 
+        // en mode w si on a le fichier deje et il y a des informations dedans avec w il efface ses informations puis ecrit depuis le debut
+        fputcsv($f, [$nom, $note_info, $note_math], ';');
+        fclose($f);
         $moyenne = ($note_info + $note_math) / 2;
         echo "<h2>Récapitulatif</h2>";
         echo "Nom : " . htmlspecialchars($nom) . "<br>";
